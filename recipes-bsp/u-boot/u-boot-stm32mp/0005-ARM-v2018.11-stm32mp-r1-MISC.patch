@@ -16887,7 +16887,7 @@ index 0000000..696be1b
 +		reload = clk_get_rate(&clk) / 256;
 +
 +	/* Enable watchdog */
-+	writel(KR_KEY_ENABLE, regmap_base + IWDG_KR);
++	//writel(KR_KEY_ENABLE, regmap_base + IWDG_KR);
 +
 +	/* Set prescaler & reload registers */
 +	writel(KR_KEY_EWA, regmap_base + IWDG_KR);
