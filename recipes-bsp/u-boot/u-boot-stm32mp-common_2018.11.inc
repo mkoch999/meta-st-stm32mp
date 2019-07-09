@@ -11,9 +11,16 @@ DEPENDS += "flex-native bison-native"
 
 COMPATIBLE_MACHINE = "(stm32mpcommon)"
 
-SRC_URI = "https://github.com/u-boot/u-boot/archive/v${PV}.tar.gz"
-SRC_URI[md5sum] = "7ee14909d5d4d701fd3a6b12aad4d762"
-SRC_URI[sha256sum] = "33b5cf99bac91d678ed6708be7b7cbbed36c45eb071e6228f83c25ad3a1de13a"
+#SRC_URI = "https://github.com/u-boot/u-boot/archive/v${PV}.tar.gz"
+#SRC_URI[md5sum] = "7ee14909d5d4d701fd3a6b12aad4d762"
+#SRC_URI[sha256sum] = "33b5cf99bac91d678ed6708be7b7cbbed36c45eb071e6228f83c25ad3a1de13a"
+
+
+SRC_URI = "git://github.com/u-boot/u-boot.git"
+SRCREV = "v2018.11"
+BB_STRICT_CHECKSUM = "0"
+
+
 
 SRC_URI += " \
     file://0001-ARM-v2018.11-stm32mp-r1-MACHINE.patch \
