@@ -12,7 +12,7 @@ UBI_VOLNAME = "${STM32MP_VENDORFS_LABEL}"
 
 # Fix to append DISTRO to image name even if we're not using ST distro setting
 # This ease flashlayout file configuration
-IMAGE_BASENAME_append = "${@'' if 'openstlinuxcommon' in OVERRIDES.split(':') else '-${DISTRO}'}"
+#IMAGE_BASENAME_append = "${@'' if 'openstlinuxcommon' in OVERRIDES.split(':') else '-${DISTRO}'}"
 
 # Reset image feature
 IMAGE_FEATURE = ""
@@ -66,3 +66,4 @@ reformat_rootfs() {
         bbwarn "${IMAGE_PARTITION_MOUNTPOINT} folder not available in rootfs folder, no reformat done..."
     fi
 }
+
