@@ -60,7 +60,7 @@ MACHINE_EXTRA_RRECOMMENDS_append = " ${@bb.utils.contains('DISTRO_FEATURES','sys
 # =========================================================================
 # Image
 # =========================================================================
-IMAGE_CLASSES += "image_types-stubi st-partitions-image"
+IMAGE_CLASSES += " image_types-stubi st-partitions-image"
 
 # Define image to use for extra partitions
 STM32MP_BOOTFS_IMAGE = "st-image-bootfs"

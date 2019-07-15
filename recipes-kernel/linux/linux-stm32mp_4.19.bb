@@ -9,6 +9,11 @@ SRC_URI = "https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.19.9.tar.xz"
 SRC_URI[md5sum] = "d7e09d6be85ec8548c73e8713531e958"
 SRC_URI[sha256sum] = "fc116cc6829c73944215d3b3ac0fc368dde9e8235b456744afffde001269dbf2"
 
+BUILD_REPRODUCIBLE_BINARIES = "0"
+#BB_STRICT_CHECKSUM = "0"
+#SRC_URI = "git://github.com/torvalds/linux.git"
+#SRCREV = "v4.19"
+
 SRC_URI += " \
     file://${LINUX_VERSION}/4.19.9/0001-ARM-stm32mp1-r0-rc1-MACHINE.patch \
     file://${LINUX_VERSION}/4.19.9/0002-ARM-stm32mp1-r0-rc1-CLOCK.patch \
