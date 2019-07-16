@@ -2,8 +2,10 @@
 
 require conf/machine/include/st-machine-extlinux-config-stm32mp.inc
 require conf/machine/include/st-machine-features-stm32mp.inc
-require conf/machine/include/st-machine-flashlayout-stm32mp.inc
-require conf/machine/include/st-machine-flashlayout-deleteall-stm32mp.inc
+
+# don't use the flash layout, use wks instead
+#require conf/machine/include/st-machine-flashlayout-stm32mp.inc
+#require conf/machine/include/st-machine-flashlayout-deleteall-stm32mp.inc
 
 # Define specific common machine name
 MACHINEOVERRIDES .= ":stcommon"
@@ -74,7 +76,7 @@ STM32MP_VENDORFS_LABEL = "vendorfs"
 STM32MP_VENDORFS_MOUNTPOINT_IMAGE = "/vendor"
 
 # Define extra partition to build
-PARTITIONS_IMAGE = "${STM32MP_BOOTFS_IMAGE} ${STM32MP_USERFS_IMAGE} ${STM32MP_VENDORFS_IMAGE}"
+#PARTITIONS_IMAGE = "${STM32MP_BOOTFS_IMAGE} ${STM32MP_USERFS_IMAGE} ${STM32MP_VENDORFS_IMAGE}"
 PARTITIONS_MOUNTPOINT_IMAGE = "${STM32MP_BOOTFS_MOUNTPOINT_IMAGE} ${STM32MP_USERFS_MOUNTPOINT_IMAGE} ${STM32MP_VENDORFS_MOUNTPOINT_IMAGE}"
 
 # Enable licence summary and configure License content generation
